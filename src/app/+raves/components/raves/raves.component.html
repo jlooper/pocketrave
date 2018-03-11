@@ -1,0 +1,8 @@
+<section class="tiles" *ngIf="!(isLoading$ | async)">
+    <article *ngFor="let item of items$ | async" [hidden]="filter(item.event, item.approved)" [routerLink]="['/rave/'+item.key]">
+        <span>
+            <Img src="{{ item.image }}" width="100" height="100" />
+            <p>{{ item.title }}</p>
+        </span>       
+    </article>
+</section>

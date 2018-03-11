@@ -1,0 +1,148 @@
+
+
+@keyframes bgpos {
+    0%,100% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -1024px 0;
+    }
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+  }
+  
+  .kaleid_main {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+  
+  .kaleid_cont {
+    width: 100vw;
+    height: 100vh;
+    left: -50%;
+    top: -20%;
+    position: relative;
+    margin: auto;
+    
+  }
+  
+  .kaleid_cont .kal {
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -o-transform-origin: right top;
+    -ms-transform-origin: right top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+  }
+  
+  .kaleid_cont .kalsec {
+    height: 120%;
+    width: 120%;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    position: relative;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -o-transform-origin: left top;
+    -ms-transform-origin: left top;
+    left: 100%;
+    top: 0;
+    animation: bgpos 20s infinite;
+  }
+  
+  .kaleid_cont .sec1 {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+  }
+  
+  .kaleid_cont .sec2 {
+    -webkit-transform: rotate(30deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(30deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(30deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(30deg) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .kaleid_cont .sec3 {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+  }
+  
+  .kaleid_cont .sec4 {
+    -webkit-transform: rotate(90deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(90deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(90deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(90deg) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .kaleid_cont .sec5 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  
+  .kaleid_cont .sec6 {
+    -webkit-transform: rotate(150deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(150deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(150deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(150deg) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .kaleid_cont .sec7 {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+  }
+  
+  .kaleid_cont .sec8 {
+    -webkit-transform: rotate(210deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(210deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(210deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(210deg) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .kaleid_cont .sec9 {
+    -webkit-transform: rotate(210deg);
+    -moz-transform: rotate(210deg);
+    -o-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+  }
+  
+  .kaleid_cont .sec10 {
+    -webkit-transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(270deg) matrix(-1, 0, 0, 1, 0, 0);
+  }
+  
+  .kaleid_cont .sec11 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  
+  .kaleid_cont .sec12 {
+    -webkit-transform: rotate(330deg) matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: rotate(330deg) matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: rotate(330deg) matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: rotate(330deg) matrix(-1, 0, 0, 1, 0, 0);
+  }

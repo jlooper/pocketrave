@@ -8,11 +8,76 @@
 // Import the theme’s main ruleset.
 @import '~nativescript-theme-core/scss/index';
 
-.container {
-    margin:40;
+/*@import url("~/platform.css");*/
+
+/*pallette taken from http://www.colourlovers.com/palette/2053287/Raving_Night_Lights*/
+
+Page {
+    background-color: #1C0123;
+    font-size: 17;
+    background-image: url('res://bg3');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+ActionBar{
+    background-color:#6E09F5;
+    color:#F922BE;
 }
 
-.h1 {
-    font-size:32px;
-    font-weight:bold;
+.title {
+    font-weight: bold;
+    margin-bottom: 10;
+    color: #07E649;
+}
+.card {
+    margin: 10;
+    padding:10;
+    vertical-align:top;
+    background-color: black;
+    opacity: .90;
+}
+
+Image {
+    margin-top: 20;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30;
+}
+
+.blue{
+   background-color:#09B3E7;
+   color: white;
+   border-radius: 2;
+}
+.pink{
+    background-color:#F922BE;
+    border-radius: 2;
+}
+.purple{
+    background-color:#6E09F5;
+    border-radius: 2;
+}
+
+.black {
+    color: black;
+}
+
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+.action-btn {
+  color:#fff;
+}
+
+ListView {
+  background-color: white;
+  opacity: .9;
+}
+
+.drawingPad {
+    background-color: "#000";
+    border: 1 gray;
+
 }

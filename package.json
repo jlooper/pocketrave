@@ -25,7 +25,11 @@
         "@ngx-translate/http-loader": "~2.0.1",
         "core-js": "^2.4.1",
         "rxjs": "^5.5.0",
-        "zone.js": "^0.8.18"
+        "zone.js": "^0.8.18",
+        "angularfire2": "^5.0.0-rc.6",
+        "firebaseui": "^2.6.2",
+        "firebaseui-angular": "^2.6.1",
+        "firebase": "^4.10.1"
     },
     "devDependencies": {
         "@angular/cli": "^1.6.7",

@@ -20,6 +20,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(<any>http, '/assets/i18n/', '.json');
 }
 
+import { FirebaseService, SoundCloudService } from "./services";
+
+import {registerElement} from 'nativescript-angular/element-registry';
+registerElement("DrawingPad", () => require("nativescript-drawingpad").DrawingPad);
+
+
 @NgModule({
     bootstrap: [
         AppComponent
@@ -42,7 +48,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         AppComponent
     ],
     providers: [
-        // Allows your {N} application to use lazy-loading
+        FirebaseService,
+        SoundCloudService        
     ],
     schemas: [
         NO_ERRORS_SCHEMA

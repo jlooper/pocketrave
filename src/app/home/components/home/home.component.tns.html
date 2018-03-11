@@ -1,6 +1,18 @@
-<GridLayout rows="auto,auto">
-    <Label class="h1 title"
-        [text]="'home.title' | translate"></Label>
-    <Label class="p description" textWrap="true" row="1"
-        [text]="'home.description' | translate"></Label>
-</GridLayout>
+<ActionBar title="PocketRave">
+    <ActionItem (tap)="help()" ios.position="right">
+        <Button [text]="'fa-question-circle' | fonticon" class="purple fa action-btn"></Button>
+    </ActionItem>
+</ActionBar>
+<ScrollView> 
+    <StackLayout>
+    <Button (tap)="create()" text="Create a new PocketRave!" class="blue"></Button>  
+    <WrapLayout horizontalAlignment="center">
+        <StackLayout class="innerCard" width="40%" *ngFor="let rave of (raves$ | async)">
+            <StackLayout horizontalAlignment="center">
+                <Image [src]="rave.image" height="50"></Image>
+                <Label horizontalAlignment="center" textWrap="true" [text]="rave.title"></Label>
+            </StackLayout>
+        </StackLayout>
+    </WrapLayout>
+    </StackLayout>
+</ScrollView>

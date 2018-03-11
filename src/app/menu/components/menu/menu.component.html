@@ -1,2 +1,33 @@
-<seed-menu-item *ngFor="let item of items"
-    [item]="item"></seed-menu-item>
+
+<header id="header">
+	<h1 [routerLink]="['/']"><img src="../assets/logo.png"></h1>
+	<nav class="links">
+		<ul>
+			<select name="events" (change)="selectEvent($event)">
+                <option value="all">Events</option>
+                    <option *ngFor="let event of events$ | async" [value]="event.key">
+                        {{event.name}}
+                    </option>
+            </select>
+			<li [routerLink]="['/raves/all']">All Raves</li>
+			<li [routerLink]="['/lightshow']">Add A Light Show!</li>
+			<li [routerLink]="['/about']">About PocketRave</li>
+			
+		</ul>
+	</nav>
+	<nav class="tabletlinks">
+		<ul id="menu">
+			<li [routerLink]="['/raves/all']">Choose</li>
+			<li [routerLink]="['/lightshow']">Lights!</li>
+			<li [routerLink]="['/about']">About</li>
+		</ul>
+	</nav>	
+</header>
+
+
+
+<nav class="phonelinks">
+	<span class="navbutton" [routerLink]="['/raves/all']">Choose</span>
+	<span class="navbutton" [routerLink]="['/lightshow']">Lights!</span>
+	<span class="navbutton" [routerLink]="['/about']">About</span>
+</nav>

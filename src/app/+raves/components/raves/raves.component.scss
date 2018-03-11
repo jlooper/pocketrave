@@ -1,0 +1,253 @@
+:host {
+    display: block;
+    padding: 20px 16px;
+  }
+  
+  /* Tiles */
+  
+      .tiles {
+          display: -moz-flex;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          -moz-flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          position: relative;
+          margin: -2.5em 0 0 -2.5em; 
+          padding-bottom: 5px; 
+      }
+  
+          .tiles article {
+              -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+              -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+              -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+              transition: transform 0.5s ease, opacity 0.5s ease;
+              position: relative;
+              width: calc(33.33333% - 2.5em);
+              margin: 2.5em 0 0 2.5em;
+              border: 1px #333333 solid; 
+              border-radius: 5px;
+              background-color: black;
+              cursor: pointer;
+          }
+  
+              .tiles article > .image {
+                  -moz-transition: -moz-transform 0.5s ease;
+                  -webkit-transition: -webkit-transform 0.5s ease;
+                  -ms-transition: -ms-transform 0.5s ease;
+                  transition: transform 0.5s ease;
+                  position: relative;
+                  display: block;
+                  width: 100%;
+                  border-radius: 4px;
+                  overflow: hidden;
+              }
+  
+                  .tiles article > .image img {
+                      display: block;
+                      width: 100%;
+                  }
+  
+                  .tiles article > .image:before {
+                      -moz-pointer-events: none;
+                      -webkit-pointer-events: none;
+                      -ms-pointer-events: none;
+                      pointer-events: none;
+                      -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+                      -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+                      -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+                      transition: background-color 0.5s ease, opacity 0.5s ease;
+                      content: '';
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      opacity: 1.0;
+                      z-index: 1;
+                      opacity: 0.8;
+                  }
+  
+                  .tiles article > .image:after {
+                      -moz-pointer-events: none;
+                      -webkit-pointer-events: none;
+                      -ms-pointer-events: none;
+                      pointer-events: none;
+                      -moz-transition: opacity 0.5s ease;
+                      -webkit-transition: opacity 0.5s ease;
+                      -ms-transition: opacity 0.5s ease;
+                      transition: opacity 0.5s ease;
+                      content: '';
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                      opacity: 0.25;
+                      z-index: 2;
+                  }
+  
+             
+              body:not(.is-touch) .tiles article:hover > .image {
+                  -moz-transform: scale(1.1);
+                  -webkit-transform: scale(1.1);
+                  -ms-transform: scale(1.1);
+                  transform: scale(1.1);
+              }
+  
+                  body:not(.is-touch) .tiles article:hover > .image:before {
+                      background-color: #333333;
+                      opacity: 0.35;
+                  }
+  
+                  body:not(.is-touch) .tiles article:hover > .image:after {
+                      opacity: 0;
+                  }
+  
+              body:not(.is-touch) .tiles article:hover .content {
+                  max-height: 15em;
+                  opacity: 1;
+              }
+  
+          * + .tiles {
+              margin-top: 2em;
+          }
+  
+          body.is-loading .tiles article {
+              -moz-transform: scale(0.9);
+              -webkit-transform: scale(0.9);
+              -ms-transform: scale(0.9);
+              transform: scale(0.9);
+              opacity: 0;
+          }
+  
+          body.is-touch .tiles article .content {
+              max-height: 15em;
+              opacity: 1;
+          }
+  
+          @media screen and (max-width: 1280px) {
+  
+              .tiles {
+                  margin: -1.25em 0 0 -1.25em;
+              }
+  
+                  .tiles article {
+                      width: calc(33.33333% - 1.25em);
+                      margin: 1.25em 0 0 1.25em;
+                  }
+  
+          }
+  
+          @media screen and (max-width: 980px) {
+  
+              .tiles {
+                  margin: -2.5em 0 0 -2.5em;
+              }
+  
+                  .tiles article {
+                      width: calc(50% - 2.5em);
+                      margin: 2.5em 0 0 2.5em;
+                  }
+  
+          }
+  
+          @media screen and (max-width: 736px) {
+  
+              .tiles {
+                  margin: -1.25em 0 0 -1.25em;
+              }
+  
+                  .tiles article {
+                      width: calc(50% - 1.25em);
+                      margin: 1.25em 0 0 1.25em;
+                  }
+  
+                      .tiles article:hover > .image {
+                          -moz-transform: scale(1.0);
+                          -webkit-transform: scale(1.0);
+                          -ms-transform: scale(1.0);
+                          transform: scale(1.0);
+                      }
+  
+          }
+  
+          @media screen and (max-width: 480px) {
+  
+              .tiles {
+                  margin: 0;
+              }
+  
+                  .tiles article {
+                      width: 100%;
+                      margin: 1.25em 0 0 0;
+                  }
+  
+          }
+  
+  /*loader*/
+  .loader:before,
+  .loader:after,
+  .loader {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+  }
+  .loader {
+    font-size: 10px;
+    margin: 10px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  @-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em #ffffff;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0 #ffffff;
+    }
+  }
+  @keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em #ffffff;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0 #ffffff;
+    }
+  }
+  

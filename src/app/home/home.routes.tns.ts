@@ -8,7 +8,7 @@ export const HomeRoutes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'about',
-        loadChildren: './app/+about/about.module#AboutModule'
+        path: 'create',
+        loadChildren: './app/+create/create.module#CreateModule'
     }
 ];

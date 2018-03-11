@@ -1,8 +1,659 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset */
+html,
+body,
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box-sizing border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Set up a default font and some padding to provide breathing room */
 body {
-    margin:0;
-    font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    background-image: url("./assets/bg.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 5em 0 2em 0;
 }
-.container {
-    margin:40px;
+
+/* Main */
+
+
+p {
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
+
+ul {
+  margin: 10px 0 0 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font-weight: 400;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.content{
+    margin: 2em;
+    border-radius: 2px;
+    background-color: black;
+    padding: 1em;
+    font-size: 20px;
+}
+a {
+    color: white;
+}
+  
+  /*
+      Fractal by HTML5 UP
+      html5up.net | @ajlkn
+      Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  */
+  
+  /* Reset */
+  
+  html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+/* Button */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    height: 2.85em;
+    line-height: 2.95em;
+    padding: 0 1.75em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+   
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        padding: 0;
+    }
+
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    background-color: transparent;
+    color: #828282 !important;
+    box-shadow: inset 0 0 0 2px #e6e6e6;
+}
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover,
+    button:hover,
+    .button:hover {
+        background-color: rgba(144, 144, 144, 0.075);
+    }
+
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    input[type="button"]:active,
+    button:active,
+    .button:active {
+        background-color: rgba(144, 144, 144, 0.15);
+    }
+
+    input[type="submit"].special,
+    input[type="reset"].special,
+    input[type="button"].special,
+    button.special,
+    .button.special {
+        box-shadow: none;
+        background-color: #4696e5;
+        color: #ffffff !important;
+    }
+
+        input[type="submit"].special:hover,
+        input[type="reset"].special:hover,
+        input[type="button"].special:hover,
+        button.special:hover,
+        .button.special:hover {
+            background-color: #5ca3e8;
+        }
+
+        input[type="submit"].special:active,
+        input[type="reset"].special:active,
+        input[type="button"].special:active,
+        button.special:active,
+        .button.special:active {
+            background-color: #3089e2;
+        }
+
+
+
+    .image.phone {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0 0 3em 0;
+        width: 13em;
+    }
+
+        .image.phone img {
+            border-radius: 0;
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+        .image.phone .inner, .image.phone:before, .image.phone:after {
+            display: block;
+            border: solid 2px rgba(255, 255, 255, 0.25);
+            background-color: black;
+
+        }
+
+        .image.phone .inner {
+            position: relative;
+        }
+
+            .image.phone .inner:before, .image.phone .inner:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+            }
+
+            .image.phone .inner:before {
+                top: -1.375em;
+                margin-left: -1em;
+                width: 2em;
+                height: 0.25em;
+                border-radius: 0.5em;
+                background: rgba(255, 255, 255, 0.25);
+            }
+
+            .image.phone .inner:after {
+                bottom: -2.75em;
+                margin-left: -1em;
+                width: 2em;
+                height: 2em;
+                border-radius: 100%;
+                border: solid 2px rgba(255, 255, 255, 0.25);
+            }
+
+        .image.phone:before, .image.phone:after {
+            content: '';
+        }
+
+        .image.phone:before {
+            height: 2.5em;
+            border-radius: 1em 1em 0 0;
+            border-bottom: 0;
+        }
+
+        .image.phone:after {
+            height: 3.5em;
+            border-radius: 0 0 1em 1em;
+            border-top: 0;
+        }
+
+.image {
+    box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px #e6e6e6;
+}
+
+    .image.phone {
+        box-shadow: none;
+    }
+
+        .image.phone .inner, .image.phone:before, .image.phone:after {
+            border-color: #e6e6e6;
+        }
+
+        .image.phone .inner:before {
+            background: #e6e6e6;
+        }
+
+        .image.phone .inner:after {
+            border-color: #e6e6e6;
+        }
+
+/* List */
+
+ol {
+    list-style: decimal;
+    margin: 0 0 2em 0;
+    padding-left: 1.25em;
+}
+
+    ol li {
+        padding-left: 0.25em;
+    }
+
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+
+    ul li {
+        padding-left: 0.5em;
+    }
+
+    
+ 
+
+    ul.actions {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
+    }
+
+        ul.actions li {
+            display: inline-block;
+            padding: 0 1em 0 0;
+            vertical-align: middle;
+        }
+
+            ul.actions li:last-child {
+                padding-right: 0;
+            }
+
+        ul.actions.small li {
+            padding: 0 0.5em 0 0;
+        }
+
+        ul.actions.vertical li {
+            display: block;
+            padding: 1em 0 0 0;
+        }
+
+            ul.actions.vertical li:first-child {
+                padding-top: 0;
+            }
+
+            ul.actions.vertical li > * {
+                margin-bottom: 0;
+            }
+
+        ul.actions.vertical.small li {
+            padding: 0.5em 0 0 0;
+        }
+
+            ul.actions.vertical.small li:first-child {
+                padding-top: 0;
+            }
+
+        
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    ul.actions {
+        margin: 0 0 2em 0;
+    }
+
+        ul.actions li {
+            padding: 1em 0 0 0;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+            ul.actions li:first-child {
+                padding-top: 0;
+            }
+
+            ul.actions li > * {
+                width: 100%;
+                margin: 0 !important;
+            }
+
+                ul.actions li > *.icon:before {
+                    margin-left: -2em;
+                }
+
+        ul.actions.small li {
+            padding: 0.5em 0 0 0;
+        }
+
+            ul.actions.small li:first-child {
+                padding-top: 0;
+            }
+
+}
+
+
+
+/* Section/Article */
+
+
+header p {
+    position: relative;
+    margin: 0 0 1.5em 0;
+}
+
+
+header h2 + p {
+    font-size: 1.25em;
+    margin-top: -0.5em;
+    line-height: 1.5em;
+}
+
+header h3 + p {
+    font-size: 1.1em;
+    margin-top: -0.25em;
+    line-height: 1.5em;
+}
+
+header h4 + p,
+header h5 + p,
+header h6 + p {
+    font-size: 0.9em;
+    margin-top: -0.6em;
+    line-height: 1.5em;
+}
+
+
+/* Header */
+
+#header {
+    color: #fff;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-position: top left, center center;
+    background-attachment: fixed, fixed;
+    background-size: auto, cover;
+    padding:20px;
+    border-radius: 6px;
+    border: 0;	
+}
+
+#header .content{
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+    #header input[type="submit"],
+    #header input[type="reset"],
+    #header input[type="button"],
+    #header button,
+    #header .button {
+        background-color: transparent;
+        color: #ffffff !important;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+    }
+
+        #header input[type="submit"]:hover,
+        #header input[type="reset"]:hover,
+        #header input[type="button"]:hover,
+        #header button:hover,
+        #header .button:hover {
+            background-color: rgba(255, 255, 255, 0.075);
+        }
+
+        #header input[type="submit"]:active,
+        #header input[type="reset"]:active,
+        #header input[type="button"]:active,
+        #header button:active,
+        #header .button:active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        #header input[type="submit"].special,
+        #header input[type="reset"].special,
+        #header input[type="button"].special,
+        #header button.special,
+        #header .button.special {
+            box-shadow: none;
+            background-color: #ffffff;
+            color: #000 !important;
+        }
+
+    #header label {
+        color: #ffffff;
+    }
+
+    #header select{
+        color: inherit;
+        font-size: 15pt;
+        background-color: rgba(255, 255, 255, 0.075);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+
+       #header select:focus{
+            border-color: #ffffff;
+            box-shadow: 0 0 0 1px #ffffff;
+        }
+
+    #header .select-wrapper:before {
+        color: rgba(255, 255, 255, 0.25);
+    }
+        
+    
+
+        #header .image.phone {
+            box-shadow: none;
+        }
+
+            #header .image.phone .inner, #header .image.phone:before, #header .image.phone:after {
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+
+            #header .image.phone .inner:before {
+                background: rgba(255, 255, 255, 0.25);
+            }
+
+            #header .image.phone .inner:after {
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+
+
+    #header h1 {
+        font-size: 3.25em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    #header p {
+        font-size: 1.5em;
+        line-height: 1.35em;
+    }
+
+        #header p br {
+            display: inline;
+        }
+
+    #header .content {
+        -moz-transition: opacity 0.5s ease, -moz-transform 1s ease;
+        -webkit-transition: opacity 0.5s ease, -webkit-transform 1s ease;
+        -ms-transition: opacity 0.5s ease, -ms-transform 1s ease;
+        transition: opacity 0.5s ease, transform 1s ease;
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+        text-align: right;
+        margin: -3.5em 4em 0 0;
+    }
+
+        #header .content > :last-child {
+            margin-bottom: 0;
+        }
+
+    
+    
+
+    @media screen and (max-width: 980px) {
+
+        #header {
+            height: auto;
+            min-height: 0;
+        }
+
+            #header .content {
+                margin: -2em 4em 0 0;
+            }
+
+    }
+
+    @media screen and (max-width: 980px) and (orientation: portrait) {
+
+        #header {
+            padding: 6em 3em 4em 3em ;
+            -moz-flex-direction: column-reverse;
+            -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        }
+
+            #header .content {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 0 0 2em 0;
+            }
+
+            #header .image {
+                overflow: hidden;
+            }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+    
+            #header h1 {
+                font-size: 2em;
+            }
+
+            #header p {
+                font-size: 1em;
+                line-height: inherit;
+            }
+
+    }
+
+    @media screen and (max-width: 736px) and (orientation: landscape) {
+
+        #header {
+            padding: 2em 2em 0.1em 2em ;
+        }
+
+            #header .content {
+                margin: 0 2em 2em 0;
+            }
+
+            #header .image {
+                font-size: 0.8em;
+                width: 15em;
+                max-width: 20vw;
+            }
+
+                #header .image .inner, #header .image:before, #header .image:after {
+                    font-size: 0.8em;
+                }
+
+    }
+
+    @media screen and (max-width: 736px) and (orientation: portrait) {
+
+        #header {
+            padding: 3em 1.5em 1em 1.5em ;
+        }
+
+            #header .image {
+                font-size: 0.6em;
+                max-width: 60vw;
+            }
+
+    }
+
+@media screen and (max-width: 480px) and (orientation: landscape) {
+
+    #header {
+        padding: 2em 1.5em 0.1em 1.5em ;
+    }
+
+        #header .image {
+            font-size: 0.7em;
+        }
+
+        #header .actions {
+            font-size: 0.8em;
+        }
+
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    #header {
+        padding: 2em 1em 0.1em 1em ;
+    }
+
+}
+
+
+
+/* Main */
+
+
+    @media screen and (max-width: 736px) {
+
+        #main {
+            padding: 3em 0 1em 0 ;
+        }
+
+    }
+
+
