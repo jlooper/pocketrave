@@ -1,2 +1,8 @@
 @import 'app-common';
-@import '~nativescript-theme-core/scss/platforms/index.android';
+SearchBar{
+    background-color:white;
+     color: black;   
+}
+Button {
+    margin: 4;
+}

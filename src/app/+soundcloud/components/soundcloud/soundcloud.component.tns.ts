@@ -23,6 +23,11 @@ export class SoundcloudComponent {
     private soundcloud: SoundCloudService) {
   }
 
+  public goHome(){
+      this._router.navigate(['/'])
+  }
+
+
   public search(e: any) {
     if (e && e.object) {
 

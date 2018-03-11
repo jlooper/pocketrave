@@ -1,3 +1,9 @@
 @import 'app-common';
-@import '~nativescript-theme-core/scss/platforms/index.ios';
-
+Button {
+    margin: 10;
+    padding: 10;   
+}
+SearchBar {
+     background-color:black;
+     color: black;
+ }
