@@ -12,12 +12,12 @@
     <SearchBar #SearchBar (submit)="search($event)" (clear)="clear()"></SearchBar>
     <GridLayout columns="*" rows="*">
         <ListView [items]="tracks$ | async" row="0">
-                <template let-item="item">
-                    <GridLayout columns="*,*" rows="*">
-                        <Image [src]="item.artwork_url" col="0" width="50" height="50" (tap)="selectTrack(item)"></Image>
-                        <Label class="black" [text]="item.title" col="1" textWrap="true"  (tap)="selectTrack(item)"></Label>
-                    </GridLayout>
-                </template>
-            </ListView>
-        </GridLayout>
+            <ng-template let-item="item">
+                <GridLayout columns="*,*" rows="*">
+                    <Image [src]="item.artwork_url" col="0" width="50" height="50" (tap)="selectTrack(item)"></Image>
+                    <Label class="black" [text]="item.title" col="1" textWrap="true"  (tap)="selectTrack(item)"></Label>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
   </StackLayout>

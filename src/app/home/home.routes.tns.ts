@@ -10,5 +10,9 @@ export const HomeRoutes: Routes = [
     {
         path: 'create',
         loadChildren: './app/+create/create.module#CreateModule'
+    },
+    {
+        path: 'soundcloud',
+        loadChildren: './app/+soundcloud/soundcloud.module#SoundcloudModule'
     }
 ];

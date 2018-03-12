@@ -18,27 +18,16 @@ export class SoundCloudService {
 
   public search(q: string): Observable<any> {
     let soundcloudUrl = this.requestURL.replace('[q]', encodeURI(q));
-    //return this.http.get(soundcloudUrl)
-      /*.map((res) => {
-        let tracks = res.json();
-        if (tracks && tracks.length) {
-          for (let t of tracks) {
-            // convert to model
-            t = new SoundCloudModel(t);
-          }
-        }
-        return tracks || [];
-      })*/
-      //.catch(this.handleError);
-      return this.http.get(soundcloudUrl)
-            .map(
-                res => {
-                  console.log(res);
-                },
-                err => {
-                  console.log("Error occured");
-                }
-              );
+    return this.http.get(soundcloudUrl)
+      .map(
+          res => {
+            let tracks = res;
+            return tracks || [];
+            },
+            err => {
+              alert("Sorry, there was a problem fetching tracks. Please try again!");
+            }
+          );
 	}
 
   public createRave(finalUrl:string, url: string, title: string, event: string) {
