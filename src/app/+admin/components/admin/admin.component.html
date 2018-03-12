@@ -1,0 +1,10 @@
+<firebase-ui></firebase-ui>
+<section *ngFor="let admin of admin$ | async" class="tiles">
+    <article *ngIf="admin.admin">
+        <span *ngFor="let item of items$ | async">            
+            <Img src="{{ item.image }}" width="100" height="100" />
+            <p>{{ item.title }}</p>          
+            <button class="button" (click)="approve(item.key,item)">Approve</button>       
+        </span>
+    </article>
+</section>

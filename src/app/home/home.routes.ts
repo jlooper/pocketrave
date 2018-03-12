@@ -23,4 +23,8 @@ export const HomeRoutes: Routes = [
         path: 'lightshow',
         loadChildren: 'app/+lightshow/lightshow.module#LightshowModule'
     },
+    {
+        path: 'admin',
+        loadChildren: 'app/+admin/admin.module#AdminModule'
+    },
 ];
