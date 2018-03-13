@@ -14,5 +14,9 @@ export const HomeRoutes: Routes = [
     {
         path: 'soundcloud',
         loadChildren: './app/+soundcloud/soundcloud.module#SoundcloudModule'
+    },
+    {
+        path: 'events',
+        loadChildren: './app/+events/events.module#EventsModule'
     }
 ];

@@ -14,7 +14,7 @@
 
         <StackLayout marginBottom="10">
             <Label class="title" text="Pen Width:" textWrap="true"></Label>
-            <Slider minValue="1" maxValue="20" value="3" (propertyChange)="widthChangeThrottle($event)"></Slider>
+            <Slider minValue="1" maxValue="20" value="3" (valueChange)="widthChange($event)"></Slider>
         </StackLayout>
 
         <StackLayout orientation="horizontal" horizontalAlignment="center">

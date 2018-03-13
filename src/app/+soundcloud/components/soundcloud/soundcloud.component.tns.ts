@@ -44,6 +44,10 @@ export class SoundcloudComponent {
     }
   }
 
+  public clear(){
+    //tbd
+  }
+
   public selectTrack(item: any) {
     let imageUrl = appSettings.getString('finalUrl');
     //write to firebase

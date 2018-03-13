@@ -1,8 +1,8 @@
 import {ViewChild, ElementRef, Inject, NgZone, Component} from '@angular/core';
 import {FirebaseService} from '../../../services';
 import {Router} from '@angular/router';
+import { Slider } from "ui/slider";
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {throttle} from 'lodash';
 import * as frame from 'ui/frame';
 import { LoadingIndicator } from 'nativescript-loading-indicator';
 import { ColorPicker } from 'nativescript-color-picker';
@@ -16,8 +16,7 @@ import * as fs from 'file-system';
 @Component({
     moduleId: module.id,
     selector: 'seed-create',
-    templateUrl: './create.component.html',
-    styleUrls: ['./create.component.css']
+    templateUrl: './create.component.html'
 })
 export class CreateComponent {
 
@@ -41,19 +40,15 @@ export class CreateComponent {
   constructor(private _router: Router,
     private firebase: FirebaseService,
     private ngZone: NgZone,
-  ) {
-    // since (propertyChange) event binding is called many times a second, best to throttle it :)
-    this.widthChangeThrottle = throttle(this.widthChange.bind(this), 500);
+  ) {}
+
+  public goHome(){
+    this._router.navigate(['/'])
   }
 
+  public saveDrawing() {
 
-
-  public saveDrawing(args: any) {
-
-
-      let pad = this.DrawingPad.nativeElement;
-
-        
+      let pad = this.DrawingPad.nativeElement;       
         if (frame.topmost().ios) {
           pad.getDrawing().then((data: any) => {
             this.save(data);
@@ -96,7 +91,7 @@ export class CreateComponent {
 
   }
 
-  public clearDrawing(args: any) {
+  public clearDrawing() {
 
     var options = {
       title: 'Clear drawing?',
@@ -126,13 +121,9 @@ export class CreateComponent {
 
   }
 
-  public widthChange(e: any) {
-    if (e && e.value) {
-      // since we throttle this callback, run in zone to be safe
-      this.ngZone.run(() => {
-        this.penWidth$.next(Math.floor(e.value));
-      });
-    }
+  public widthChange(args) {
+    let slider = <Slider>args.object;
+    this.penWidth$.next(Math.floor(slider.value));
   }
   
 }

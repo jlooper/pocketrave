@@ -1,0 +1,10 @@
+<ActionBar title="Events">
+    
+</ActionBar>
+<ScrollView>
+<StackLayout>    
+        <StackLayout *ngFor="let event of (events$ | async)">
+            <Button class="blue" [text]="event.name" (tap)="chooseEvent(event.id)"></Button>
+        </StackLayout>
+</StackLayout>
+</ScrollView>
