@@ -1,9 +1,9 @@
 {
   "name": "angular-native-seed",
-  "version": "0.0.0",
-  "repository": "<fill-your-repository-here>",
+  "version": "1.3",
+  "repository": "http://github.com/jlooper/pocketrave",
   "nativescript": {
-    "id": "com.domain.project",
+    "id": "com.ladeezfirstmedia.pocketrave",
     "tns-android": {
       "version": "3.5.0-rc-2018.1.8.1"
     },

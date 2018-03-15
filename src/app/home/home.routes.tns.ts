@@ -9,14 +9,14 @@ export const HomeRoutes: Routes = [
     },
     {
         path: 'create',
-        loadChildren: './app/+create/create.module#CreateModule'
+        loadChildren: 'app/+create/create.module#CreateModule'
     },
     {
         path: 'soundcloud',
-        loadChildren: './app/+soundcloud/soundcloud.module#SoundcloudModule'
+        loadChildren: 'app/+soundcloud/soundcloud.module#SoundcloudModule'
     },
     {
         path: 'events',
-        loadChildren: './app/+events/events.module#EventsModule'
+        loadChildren: 'app/+events/events.module#EventsModule'
     }
 ];

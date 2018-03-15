@@ -2,7 +2,7 @@ import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 
 import firebase = require("nativescript-plugin-firebase");
 
-import { AppModule } from "./app/app.module";
+import { AppModule } from "./app.module";
 
 firebase.init({
         persist: true,

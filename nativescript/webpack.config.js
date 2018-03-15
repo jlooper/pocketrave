@@ -101,7 +101,7 @@ module.exports = env => {
             // AngularCompilerPlugin with augmented NativeScript filesystem to handle platform specific resource resolution.
             new nsWebpack.NativeScriptAngularCompilerPlugin(
                 Object.assign({
-                    entryModule: resolve(__dirname, "app/app.module#AppModule"),
+                    entryModule: resolve(__dirname, "app/app/app.module#AppModule"),
                     skipCodeGeneration: !aot,
                     platformOptions: {
                         platform,
