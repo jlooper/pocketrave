@@ -23,7 +23,7 @@
     "@angular/router": "~5.2.0",
     "@ngx-translate/core": "~9.1.1",
     "@ngx-translate/http-loader": "~2.0.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "nativescript-angular": "~5.2.0",
     "nativescript-audio": "^4.3.4",
     "nativescript-color-picker": "^1.3.2",
