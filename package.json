@@ -32,7 +32,7 @@
         "firebase": "^4.10.1"
     },
     "devDependencies": {
-        "@angular/cli": "^1.6.7",
+        "@angular/cli": "^14.2.8",
         "@angular/compiler-cli": "~5.2.0",
         "@types/jasmine": "2.5.38",
         "@types/node": "~6.0.60",
